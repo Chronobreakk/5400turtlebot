@@ -17,7 +17,7 @@
   </joint>
 
   <gazebo reference="base_link">
-    <material>Gazebo/Orange</material>
+    <material>Gazebo/FlatBlack</material>
   </gazebo>
 
   <link name="base_link">
