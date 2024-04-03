@@ -45,6 +45,25 @@
     </inertial>
   </link>
 
+  <gazebo reference="back_baffle">
+    <material>Gazebo/Orange</material>
+  </gazebo>
+
+  <link name="back_baffle">
+    <visual>
+      <origin xyz="0 0 0" rpy="1.57 0 0"/>
+      <geometry>
+        <box size="0.005 0.23 0.08"/>
+       </geometry>
+    </visual>
+  </link>
+
+  <joint name="base_to_back_baffle" type="fixed">
+    <parent link="base_link"/>
+    <child link="back_baffle"/>
+    <origin xyz="-0.2 0 0.045" rpy="-1.57 0 0"/>
+  </joint>
+
   <joint name="wheel_left_joint" type="continuous">
     <parent link="base_link"/>
     <child link="wheel_left_link"/>
