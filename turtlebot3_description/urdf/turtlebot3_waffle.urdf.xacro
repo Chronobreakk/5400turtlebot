@@ -46,7 +46,7 @@
   </link>
 
   <gazebo reference="back_baffle">
-    <material>Gazebo/Orange</material>
+    <material>Gazebo/Turtlebot</material>
   </gazebo>
 
   <link name="back_baffle">
@@ -58,11 +58,51 @@
     </visual>
   </link>
 
+
   <joint name="base_to_back_baffle" type="fixed">
     <parent link="base_link"/>
     <child link="back_baffle"/>
     <origin xyz="-0.2 0 0.045" rpy="-1.57 0 0"/>
   </joint>
+
+  <gazebo reference="back_baffle1">
+    <material>Gazebo/Turtlebot</material>
+  </gazebo>
+
+  <link name="back_baffle1">
+    <visual>
+      <origin xyz="0 0 0" rpy="1.57 0 0"/>
+      <geometry>
+        <box size="0.15005 0.005 0.08"/>
+       </geometry>
+    </visual>
+  </link>
+
+  <joint name="base_to_back_baffle1" type="fixed">
+    <parent link="base_link"/>
+    <child link="back_baffle1"/>
+    <origin xyz="-0.12 -0.133 0.045" rpy="-1.57 0 0"/>
+  </joint>
+
+  <gazebo reference="back_baffle2">
+    <material>Gazebo/Turtlebot</material>
+  </gazebo>
+
+  <link name="back_baffle2">
+    <visual>
+      <origin xyz="0 0 0" rpy="1.57 0 0"/>
+      <geometry>
+        <box size="0.15005 0.005 0.08"/>
+       </geometry>
+    </visual>
+  </link>
+
+  <joint name="base_to_back_baffle2" type="fixed">
+    <parent link="base_link"/>
+    <child link="back_baffle2"/>
+    <origin xyz="-0.12 0.133 0.045" rpy="-1.57 0 0"/>
+  </joint>
+
 
   <joint name="wheel_left_joint" type="continuous">
     <parent link="base_link"/>
